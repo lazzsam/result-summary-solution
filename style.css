@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+  --lightRed: hsla(0, 100%, 67%);
+  --bgLightRed: hsla(0, 100%, 67%, 0.1);
+
+  --orangeyYellow: hsl(39, 100%, 56%);
+  --bgOrangeyYellow: hsl(39, 100%, 56%, 0.1);
+
+  --greenTeal: hsl(166, 100%, 37%);
+  --bgGreenTeal: hsl(166, 100%, 37%, 0.1);
+
+  --cobaltBlue: hsl(234, 85%, 45%);
+  --bgCobaltBlue: hsl(234, 85%, 45%, 0.1);
+
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --grayBlue: hsl(224, 30%, 27%);
+  /* gradient background colors*/
+  --lightSlateBlue: hsl(252, 100%, 67%);
+  --lightRoyalBlue: hsl(241, 81%, 54%);
+  /* gradient circle colors */
+  --violetBlue: hsla(256, 72%, 46%, 1);
+  --persianBlue: hsla(241, 72%, 46%, 0);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 55%;
+  width: 600px;
+  display: flex;
+  box-shadow: 10px 10px 35px var(--lightLavender);
+  border-radius: 20px;
+}
+
+.container > .result {
+  background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.result > .title-result {
+  font-size: 20px;
+  color: var(--lightLavender);
+}
+
+.result > .score {
+  background: linear-gradient(var(--violetBlue), var(--persianBlue));
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
+.score > .big-score {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.score > p {
+  font-size: 14px;
+  color: var(--lightLavender);
+}
+
+.result > .p-big {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.result > .p-small {
+  color: var(--lightLavender);
+  text-align: center;
+  margin: 0 35px 20px 35px;
+  font-size: 16px;
+}
+
+.container > .summary {
+  background-color: white;
+  border-radius: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin-left: 30px;
+}
+
+.summary > h1 {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+.summary > ul {
+  list-style: none;
+  margin-top: -10px;
+}
+
+.summary > ul > li {
+  background-color: grey;
+  margin-bottom: 10px;
+  margin-left: -30px;
+  padding: 10px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.summary > ul > li:nth-child(1) {
+  background-color: var(--bgLightRed);
+}
+.summary > ul > li:nth-child(2) {
+  background-color: var(--bgOrangeyYellow);
+}
+.summary > ul > li:nth-child(3) {
+  background-color: var(--bgGreenTeal);
+}
+.summary > ul > li:nth-child(4) {
+  background-color: var(--bgCobaltBlue);
+}
+
+#red {
+  color: var(--lightRed);
+}
+
+#orange {
+  color: var(--orangeyYellow);
+}
+
+#green {
+  color: var(--greenTeal);
+}
+
+#blue {
+  color: var(--cobaltBlue);
+}
+
+.grey {
+  color: grey;
+}
+
+button {
+  color: white;
+  background-color: var(--grayBlue);
+  width: 90%;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
+  cursor: pointer;
+}
+
+/* ATTRIBUTION */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .container > .result {
+    text-align: center;
+    height: 450px;
+    width: 100vw;
+    display: flex;
+    border-radius: 0px 0px 50px 50px;
+  }
+
+  .result > .p-small {
+    width: 100%;
+  }
+
+  .summary {
+    width: 100vw;
+    margin-top: 30px;
+  }
+
+  .summary > ul {
+    width: 100vw;
+    margin-top: 30px;
+  }
+
+  .summary > ul > li {
+    width: 90%;
+  }
+
+  button {
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 100%;
+  }
+
+  /* .test {
+    margin-left: 280px;
+  }
+
+  .grey {
+    margin-right: 30px;
+  } */
+
+  .attribution {
+    display: none;
+  }
+}
